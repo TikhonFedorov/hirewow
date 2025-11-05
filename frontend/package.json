@@ -1,0 +1,25 @@
+{
+  "name": "hr-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@gravity-ui/uikit": "^6.0.0",
+    "axios": "^1.7.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.23.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "@types/react": "^18.2.64",
+    "@types/react-dom": "^18.2.22",
+    "vite": "^5.0.0",
+    "@vitejs/plugin-react-swc": "^3.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173"
+  }
+}

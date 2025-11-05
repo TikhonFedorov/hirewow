@@ -1,9 +1,13 @@
-fastapi
+fastapi==0.115.7
 uvicorn[standard]
 gunicorn
+pydantic==2.10.6
+pydantic-settings>=2.0
+email-validator>=2.0.0
 sqlalchemy
 psycopg2-binary
 python-jose
 passlib[bcrypt]
 alembic
 python-dotenv
+python-multipart
