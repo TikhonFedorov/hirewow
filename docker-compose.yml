@@ -2,8 +2,8 @@ services:
   db:
     image: postgres:16-alpine
     environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
+      POSTGRES_USER: hirewow
+      POSTGRES_PASSWORD: fmCp%oKS2LH
       POSTGRES_DB: appdb
     volumes:
       - postgres_data:/var/lib/postgresql/data

@@ -1,0 +1,6 @@
+# Ignore all .env files
+*.env
+
+# Ignore docker-compose override files
+docker-compose.yml
+docker-compose.override.*.yml
