@@ -1,0 +1,115 @@
+/* Cursor.sh Inspired Input - Proper Sizing */
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--cursor-space-2);
+  width: 100%;
+}
+
+.input-full {
+  width: 100%;
+}
+
+.input-label {
+  font-size: var(--cursor-text-sm);
+  font-weight: var(--cursor-weight-medium);
+  color: var(--cursor-text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  padding: var(--cursor-space-3) var(--cursor-space-4);
+  font-family: var(--cursor-font);
+  font-size: var(--cursor-text-base);
+  line-height: 1.5;
+  color: var(--cursor-text-primary);
+  background-color: var(--cursor-bg-secondary);
+  border: 1px solid var(--cursor-border);
+  border-radius: var(--cursor-radius-md);
+  transition: all var(--cursor-transition);
+  outline: none;
+  min-height: 40px;
+}
+
+.input::placeholder {
+  color: var(--cursor-text-tertiary);
+}
+
+.input:hover:not(:disabled) {
+  border-color: var(--cursor-border-hover);
+  background-color: var(--cursor-bg-hover);
+}
+
+.input:focus {
+  border-color: var(--cursor-accent);
+  background-color: var(--cursor-bg-secondary);
+  box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.1);
+}
+
+.input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: var(--cursor-bg-primary);
+}
+
+.input-error {
+  border-color: var(--cursor-error);
+}
+
+.input-error .input:focus {
+  border-color: var(--cursor-error);
+  box-shadow: 0 0 0 3px rgba(248, 81, 73, 0.1);
+}
+
+.input-icon-left,
+.input-icon-right {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cursor-text-tertiary);
+  pointer-events: none;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+}
+
+.input-icon-left {
+  left: var(--cursor-space-3);
+}
+
+.input-has-left-icon .input {
+  padding-left: calc(var(--cursor-space-3) + 20px + var(--cursor-space-2));
+}
+
+.input-icon-right {
+  right: var(--cursor-space-3);
+}
+
+.input-has-right-icon .input {
+  padding-right: calc(var(--cursor-space-3) + 20px + var(--cursor-space-2));
+}
+
+.input-error-text {
+  font-size: var(--cursor-text-sm);
+  color: var(--cursor-error);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.input-helper-text {
+  font-size: var(--cursor-text-sm);
+  color: var(--cursor-text-tertiary);
+  line-height: 1.5;
+  margin: 0;
+}

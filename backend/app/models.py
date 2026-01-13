@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, DateTime, ForeignKey
+from sqlalchemy import Column, Integer, String, Text, DateTime, ForeignKey
 from sqlalchemy.sql import func
 from sqlalchemy.orm import relationship
 from app.database import Base
@@ -23,6 +23,6 @@ class UserHistory(Base):
     id = Column(Integer, primary_key=True)
     user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
     module_name = Column(String, nullable=False)
-    query = Column(String, nullable=False)
-    response = Column(String, nullable=False)
+    query = Column(Text, nullable=False)  # Text для больших JSON строк
+    response = Column(Text, nullable=False)  # Text для больших ответов
     timestamp = Column(DateTime(timezone=True), server_default=func.now(), nullable=False)

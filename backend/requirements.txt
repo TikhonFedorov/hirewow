@@ -8,6 +8,10 @@ sqlalchemy
 psycopg2-binary
 python-jose
 passlib[bcrypt]
+bcrypt>=4.0.0
 alembic
 python-dotenv
 python-multipart
+requests
+openai
+slowapi==0.1.9

@@ -1,0 +1,44 @@
+/* Cursor.sh Inspired Card - Proper Sizing */
+
+.card {
+  background-color: var(--cursor-bg-secondary);
+  border-radius: var(--cursor-radius-lg);
+  padding: var(--cursor-space-6);
+  position: relative;
+  transition: all var(--cursor-transition);
+  overflow: hidden;
+}
+
+.card-default {
+  border: 1px solid var(--cursor-border);
+}
+
+.card-elevated {
+  border: 1px solid var(--cursor-border);
+  box-shadow: var(--cursor-shadow-md);
+}
+
+.card-outlined {
+  border: 1px solid var(--cursor-border-hover);
+  background-color: transparent;
+}
+
+.card-gradient {
+  background: linear-gradient(135deg, var(--cursor-bg-secondary) 0%, var(--cursor-bg-tertiary) 100%);
+  border: 1px solid var(--cursor-border);
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--cursor-shadow-lg);
+  border-color: var(--cursor-border-hover);
+  background-color: var(--cursor-bg-hover);
+}
+
+.card-interactive {
+  cursor: pointer;
+}
+
+.card-interactive:active {
+  transform: translateY(0);
+}

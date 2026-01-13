@@ -1,0 +1,74 @@
+/* Cursor.sh Inspired Table - Proper Sizing */
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--cursor-radius-lg);
+  border: 1px solid var(--cursor-border);
+  background-color: var(--cursor-bg-secondary);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--cursor-text-sm);
+  font-family: var(--cursor-font);
+}
+
+.table-header {
+  padding: var(--cursor-space-4) var(--cursor-space-6);
+  text-align: left;
+  font-weight: var(--cursor-weight-semibold);
+  color: var(--cursor-text-secondary);
+  background-color: var(--cursor-bg-primary);
+  border-bottom: 1px solid var(--cursor-border);
+  white-space: nowrap;
+  font-size: var(--cursor-text-sm);
+  line-height: 1.5;
+}
+
+.table-row {
+  transition: background var(--cursor-transition);
+}
+
+.table-row:hover {
+  background-color: var(--cursor-bg-hover);
+}
+
+.table-row:not(:last-child) {
+  border-bottom: 1px solid var(--cursor-border);
+}
+
+.table-cell {
+  padding: var(--cursor-space-4) var(--cursor-space-6);
+  color: var(--cursor-text-primary);
+  border-bottom: 1px solid var(--cursor-border);
+  white-space: nowrap;
+  font-size: var(--cursor-text-sm);
+  line-height: 1.5;
+}
+
+.table-cell:first-child {
+  white-space: normal;
+}
+
+/* Right-align numeric columns */
+.table-cell:nth-child(n+2):nth-child(-n+7) {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.table-empty {
+  padding: var(--cursor-space-16);
+  text-align: center;
+  color: var(--cursor-text-tertiary);
+  background-color: var(--cursor-bg-secondary);
+  border-radius: var(--cursor-radius-lg);
+  border: 1px solid var(--cursor-border);
+}
+
+.table-empty p {
+  margin: 0;
+  font-size: var(--cursor-text-base);
+  line-height: 1.5;
+}

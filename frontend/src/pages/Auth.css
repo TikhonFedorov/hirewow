@@ -1,0 +1,95 @@
+/* Cursor.sh Inspired Auth Pages - Proper Spacing */
+
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: var(--cursor-space-6);
+  background-color: var(--cursor-bg-primary);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+  padding: var(--cursor-space-8);
+}
+
+.auth-header {
+  text-align: center;
+  margin: 0 0 var(--cursor-space-8) 0;
+}
+
+.auth-title {
+  font-size: var(--cursor-text-3xl);
+  font-weight: var(--cursor-weight-bold);
+  color: var(--cursor-text-primary);
+  margin: 0 0 var(--cursor-space-2) 0;
+  line-height: 1.2;
+}
+
+.auth-subtitle {
+  font-size: var(--cursor-text-base);
+  color: var(--cursor-text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--cursor-space-5);
+  margin: 0 0 var(--cursor-space-6) 0;
+}
+
+.auth-error {
+  padding: var(--cursor-space-3) var(--cursor-space-4);
+  background-color: rgba(248, 81, 73, 0.1);
+  border: 1px solid var(--cursor-error);
+  border-radius: var(--cursor-radius-md);
+  color: var(--cursor-error);
+  font-size: var(--cursor-text-sm);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.auth-footer {
+  text-align: center;
+  padding-top: var(--cursor-space-6);
+  border-top: 1px solid var(--cursor-border);
+}
+
+.auth-footer p {
+  font-size: var(--cursor-text-sm);
+  color: var(--cursor-text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.auth-link {
+  color: var(--cursor-accent);
+  text-decoration: none;
+  font-weight: var(--cursor-weight-medium);
+  transition: color var(--cursor-transition);
+}
+
+.auth-link:hover,
+.auth-link:focus {
+  color: var(--cursor-accent-hover);
+  outline: none;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .auth-container {
+    padding: var(--cursor-space-4);
+  }
+  
+  .auth-card {
+    padding: var(--cursor-space-6);
+  }
+  
+  .auth-title {
+    font-size: var(--cursor-text-2xl);
+  }
+}

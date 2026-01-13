@@ -1,0 +1,108 @@
+.calculator-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--cursor-space-1);
+}
+
+.calculator-divider {
+  height: 1px;
+  background: var(--cursor-border);
+  margin: var(--cursor-space-2) 0;
+}
+
+.calculator-error {
+  padding: var(--cursor-space-3) var(--cursor-space-4);
+  background: rgba(248, 81, 73, 0.1);
+  border: 1px solid rgba(248, 81, 73, 0.3);
+  border-radius: var(--cursor-radius-md);
+  color: var(--cursor-error);
+  font-size: var(--cursor-text-sm);
+  line-height: 1.5;
+}
+
+.calculator-submit {
+  margin-top: var(--cursor-space-2);
+}
+
+.calculator-results {
+  display: flex;
+  flex-direction: column;
+  gap: var(--cursor-space-6);
+}
+
+.results-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.results-summary {
+  padding: var(--cursor-space-6);
+}
+
+.summary-title {
+  font-size: var(--cursor-text-xl);
+  font-weight: var(--cursor-weight-semibold);
+  color: var(--cursor-text-primary);
+  margin: 0 0 var(--cursor-space-4) 0;
+}
+
+.summary-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--cursor-space-3);
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--cursor-space-2) 0;
+}
+
+.summary-label {
+  font-size: var(--cursor-text-base);
+  color: var(--cursor-text-secondary);
+}
+
+.summary-value {
+  font-size: var(--cursor-text-base);
+  font-weight: var(--cursor-weight-semibold);
+  color: var(--cursor-text-primary);
+}
+
+.summary-divider {
+  height: 1px;
+  background: var(--cursor-border);
+  margin: var(--cursor-space-2) 0;
+}
+
+.summary-row-highlight {
+  padding-top: var(--cursor-space-4);
+}
+
+.summary-value-highlight {
+  font-size: var(--cursor-text-2xl);
+  font-weight: var(--cursor-weight-bold);
+  background: linear-gradient(135deg, var(--cursor-accent) 0%, var(--cursor-accent-hover) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.calculator-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 400px;
+  color: var(--cursor-text-tertiary);
+  text-align: center;
+  padding: var(--cursor-space-8);
+}
+
+.calculator-empty p {
+  font-size: var(--cursor-text-lg);
+  margin: 0;
+}
+
+

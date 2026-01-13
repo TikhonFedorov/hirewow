@@ -1,0 +1,52 @@
+/* Cursor.sh Inspired Hub Dashboard - Standardized Spacing */
+
+.hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--cursor-space-6);
+  padding: var(--cursor-space-8) 0;
+}
+
+.hub-card {
+  background: var(--cursor-bg-secondary);
+  border: 1px solid var(--cursor-border);
+  border-radius: var(--cursor-radius-lg);
+  padding: var(--cursor-space-6);
+  transition: all var(--cursor-transition);
+  cursor: pointer;
+}
+
+.hub-card:hover {
+  border-color: var(--cursor-border-hover);
+  background: var(--cursor-bg-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--cursor-shadow-md);
+}
+
+.hub-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--cursor-space-4);
+}
+
+.hub-card-title {
+  font-size: var(--cursor-text-xl);
+  font-weight: var(--cursor-weight-semibold);
+  color: var(--cursor-text-primary);
+  margin: 0 0 var(--cursor-space-2) 0;
+}
+
+.hub-card-description {
+  font-size: var(--cursor-text-base);
+  color: var(--cursor-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hub-grid {
+    grid-template-columns: 1fr;
+    gap: var(--cursor-space-4);
+  }
+}

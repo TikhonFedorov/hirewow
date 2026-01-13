@@ -1,0 +1,26 @@
+version: '3.8'
+
+# Production docker-compose override
+# Usage: docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+
+services:
+  api:
+    environment:
+      - CORS_ORIGINS=https://hirewow.tech,https://www.hirewow.tech
+
+  web:
+    build:
+      args:
+        - VITE_API_BASE_URL=https://hirewow.tech
+
+  proxy:
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.production.conf:/etc/nginx/nginx.conf:ro
+      - web_static:/usr/share/nginx/html
+      # SSL certificates (mount after obtaining)
+      # - ./certbot/conf:/etc/letsencrypt:ro
+      # - ./certbot/www:/var/www/certbot:ro
+

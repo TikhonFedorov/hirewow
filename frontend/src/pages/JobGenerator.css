@@ -1,0 +1,118 @@
+.generator-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--cursor-space-1);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--cursor-space-1);
+}
+
+.input-label {
+  font-size: var(--cursor-text-sm);
+  font-weight: var(--cursor-weight-medium);
+  color: var(--cursor-text-secondary);
+}
+
+.textarea {
+  width: 100%;
+  padding: var(--cursor-space-3) var(--cursor-space-4);
+  font-family: var(--cursor-font);
+  font-size: var(--cursor-text-base);
+  line-height: 1.5;
+  color: var(--cursor-text-primary);
+  background: var(--cursor-bg-secondary);
+  border: 1px solid var(--cursor-border);
+  border-radius: var(--cursor-radius-md);
+  resize: vertical;
+  transition: all var(--cursor-transition);
+  outline: none;
+}
+
+.textarea::placeholder {
+  color: var(--cursor-text-tertiary);
+}
+
+.textarea:hover:not(:disabled) {
+  border-color: var(--cursor-border-hover);
+  background: var(--cursor-bg-hover);
+}
+
+.textarea:focus {
+  border-color: var(--cursor-accent);
+  box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.1);
+}
+
+.textarea:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.generator-result {
+  padding: var(--cursor-space-6);
+}
+
+.result-content {
+  width: 100%;
+}
+
+.result-text {
+  font-family: var(--cursor-font);
+  font-size: var(--cursor-text-base);
+  line-height: 1.6;
+  color: var(--cursor-text-primary);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0;
+}
+
+.generator-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 400px;
+  color: var(--cursor-text-tertiary);
+  text-align: center;
+  padding: var(--cursor-space-8);
+}
+
+.generator-empty p {
+  font-size: var(--cursor-text-lg);
+  margin: 0;
+}
+
+.generator-error {
+  padding: var(--cursor-space-3) var(--cursor-space-4);
+  background: rgba(248, 81, 73, 0.1);
+  border: 1px solid rgba(248, 81, 73, 0.3);
+  border-radius: var(--cursor-radius-md);
+  color: var(--cursor-error);
+  font-size: var(--cursor-text-sm);
+  line-height: 1.5;
+}
+
+.generator-results {
+  display: flex;
+  flex-direction: column;
+  gap: var(--cursor-space-4);
+  height: 100%;
+}
+
+.result-header {
+  font-size: var(--cursor-text-lg);
+  font-weight: var(--cursor-weight-semibold);
+  color: var(--cursor-text-primary);
+  margin: var(--cursor-space-4) 0 var(--cursor-space-2) 0;
+}
+
+.result-header:first-child {
+  margin-top: 0;
+}
+
+.generator-submit {
+  margin-top: var(--cursor-space-2);
+}
+
